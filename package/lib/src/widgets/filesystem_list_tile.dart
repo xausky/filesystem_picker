@@ -61,7 +61,7 @@ class FilesystemListTile extends StatelessWidget {
     }
 
     if ((item is File && fsType == FilesystemType.file && multiSelect) ||
-        (item is Directory && fsType == FilesystemType.folder)) {
+        (item is Directory && fsType == FilesystemType.folder) || fsType == FilesystemType.all) {
       chs.add(InkResponse(
         onTap: () => onSelect(
             item.absolute.path,
